@@ -81,12 +81,12 @@ class mcollective::server(
     subscribe => File["${configdir}/server.cfg"],
   }
 
-  mcollective::connector { '/etc/mcollective/server.cfg':
+  mcollective::connector { "${configdir}/server.cfg":
     type => $mcollective::params::connector_type,
     pool => $mcollective::params::pool,
   }
 
-  mcollective::security::psk { '/etc/mcollective/server.cfg':
+  mcollective::security::psk { "${configdir}/server.cfg":
     psk => $::mcollective::params::psk
   }
 
