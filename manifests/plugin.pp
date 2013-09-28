@@ -49,6 +49,7 @@
 define mcollective::plugin(
   $has_ddl = false,
   $module = 'mcollective',
+  $config = {},
 ) {
 
   include mcollective::params
