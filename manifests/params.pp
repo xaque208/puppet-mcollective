@@ -15,7 +15,6 @@ class mcollective::params(
   } ],
   $port                 = '61614',
   $psk                  = '',
-  $topicprefix          = '/topic/',
   $user                 = 'mcollective',
 ) {
 
